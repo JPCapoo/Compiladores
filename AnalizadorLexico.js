@@ -32,13 +32,11 @@ function stateS2(char) {
 }
 
 function stateS3(char) {
-    // If there is a space stay in s3 / if there is a [0-9] digit go to s4 / if there is a - sign go to s1 / else crash
+    // If there is a space stay in s3 / if there is a [0-9] digit go to s4 / else crash
     if (char === ' ') {
         return 's3';
     } else if (char >= '0' && char <= '9') {
         return 's4';
-    } else if (char === '-') {
-        return 's1';
     } else {
         return false;
     }
